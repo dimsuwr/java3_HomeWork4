@@ -12,7 +12,7 @@ public class Main {
                         while (currentNum != 1){
                             block.wait();
                         }
-                        System.out.println("А ");
+                        System.out.print((i + 1) + ") " + "А ");
                         currentNum = 2;
                         block.notifyAll();
                     }
@@ -30,7 +30,7 @@ public class Main {
                         while (currentNum != 2){
                             block.wait();
                         }
-                        System.out.println("B ");
+                        System.out.print("B ");
                         currentNum = 3;
                         block.notifyAll();
                     }
@@ -60,5 +60,6 @@ public class Main {
                 e.printStackTrace();
             }
         }).start();
+
     }
 }
